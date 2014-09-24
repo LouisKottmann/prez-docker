@@ -1,0 +1,7 @@
+DROOT="/home/baboon/docker/lilith_transmission"; \
+docker run -d  --name="lilith_transmission" -p 9091:9091 \
+	-e USERNAME="admin" -e PASSWORD="password" \
+	-v "$DROOT":/config \
+	-v "$DROOT"/data:/downloads  \
+	-v /etc/localtime:/etc/localtime:ro \
+	baboon-transmission

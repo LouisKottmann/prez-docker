@@ -1,0 +1,7 @@
+DROOT=/home/baboon/docker/lilith_mumble; \
+docker run \
+	--name=lilith_mumble \
+	-d -p 64738:64738 \
+	-v "$DROOT"/data:/data \
+	-v "$DROOT"/mumble-server.ini:/etc/mumble-server.ini \
+	baboon-mumble:11092014

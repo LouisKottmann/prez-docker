@@ -1,0 +1,13 @@
+docker run --name=lilith_gitlab \
+	-d -p 10022:22 -p 10080:80 \
+	-v /home/baboon/docker/lilith_gitlab/data:/home/git/data \
+	-e "GITLAB_PORT=10080" -e "GITLAB_SSH_PORT=10022" \
+	-e "GITLAB_HOST=baboon.io" -e "GITLAB_RELATIVE_URL_ROOT=/git" \
+	-e "GITLAB_HTTPS=true" -e "GITLAB_HTTPS_ONLY=false" \
+	-e "DB_TYPE=postgres" --link lilith_postgres:postgresql \
+	-e "DB_NAME=gitlabhq_production" -e "DB_USER=POSTGRES_GITLAB_USER_XXXX" -e "DB_PASS=XXXXXXXXXXXXXXX" \
+	--link lilith_redis:redisio \
+	-e "SMTP_USER=louis.kottmann@gmail.com" -e "SMTP_PASS=XXXXXXXXXXXXXXXXX" \
+	-e "GITLAB_BACKUPS=monthly" -e "GITLAB_BACKUP_EXPIRY=0" \
+	-e "NGINX_MAX_UPLOAD_SIZE=500m" \
+	sameersbn/gitlab:7.2.1

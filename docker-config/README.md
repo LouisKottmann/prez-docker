@@ -1,0 +1,1 @@
+# Configuration of docker containers for lilith

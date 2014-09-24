@@ -1,0 +1,11 @@
+**/data
+lilith_nginx/Cert
+lilith_nginx/logs/*
+lilith_nginx/www/*
+
+lilith_transmission/dht.dat
+lilith_transmission/settings.json
+lilith_transmission/stats.json
+lilith_transmission/resume
+lilith_transmission/torrents
+

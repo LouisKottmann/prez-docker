@@ -1,0 +1,1 @@
+docker run --rm --volume /home/baboon/GitRepos/prez-docker/01-sass:/app  baboon-sass:250914 /app/normalize.scss > normalize.css
