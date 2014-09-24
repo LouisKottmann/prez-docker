@@ -60,23 +60,28 @@ Voir  https://docs.docker.com/installation/windows ou https://docs.docker.com/in
 
 ### ANY ~ Un exécutable
 - sass: https://registry.hub.docker.com/u/saulshanabrook/sass/
+--> exemple 01
 
-### PROD ~ Une application sandboxée accessible via navigateur (style transmission)
-- data-agnostic, je passe mon fichier Dockerfile à un pote et il a un son transmission aussi
+### PROD ~ Une application sandboxée accessible via navigateur (style mumble)
+- data-agnostic, je passe mon fichier Dockerfile à un pote et il a un son serveur mumble aussi, il lui suffit de modifier la configuration
 - backup facile: Dockerfile + dossier "data"
+--> exemple 02
 
 ### CLIENTS ~ Un conteneur qui contient tout, même les données de test
 - réutilisable à l'infini puisqu'à chaque fois qu'on démarre le conteneur il est neuf
 - le client n'a rien à installer si ce n'est docker
 - le client n'a pas besoin de comprendre la techno -> effet boite noire
+--> retour client Canal+
 
 ### DEV ~ Un environnement de travail agnostic
 - container linux avec tout le toutim pour une appli ruby on rails (qui prend des plombes à installer correctement, x N avec N le nombre de développeurs)
 - n'importe qui sous windows/mac/linux développe avec git+[son éditeur de texte favori]
 - le conteneur fait tourner le code comme en prod
+--> exemple 03
 
 ### SCENARIO COMPLEXE ~ Gitlab
 - redis + postgres + gitlab + env
+--> exemple 04
 
 ### SCENARO SECU
 - préparer un conteneur sur une machine de dev et la passer sur une machine de prod sans accès internet
