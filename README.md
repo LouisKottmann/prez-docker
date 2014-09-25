@@ -1,4 +1,4 @@
-# Presentation of docker
+# Présentation de docker
 
 -- Accroche
 A travers le temps, on nous a régulièrement promis le fameux "Si ça marche chez moi, ça marchera chez toi" (Build once, run anywhere): VirtualBox-likes, Puppet-likes... que de trahisons.

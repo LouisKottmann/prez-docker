@@ -24,12 +24,18 @@ RUN cd ruby-2.1.3 && \
     make install
 
 # Installer les dépendances de l'application rails
-RUN  DEBIAN_FRONTEND=noninteractive apt-get -y install git sqlite3 libsqlite3-dev
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install curl
+RUN curl -sL https://deb.nodesource.com/setup | bash -
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git sqlite3 libsqlite3-dev nodejs
 RUN gem install bundler
 
 RUN git clone https://github.com/erikthedeveloper/rails-todo-app-simple.git
 WORKDIR rails-todo-app-simple
-RUN bundle install
-RUN rake db:setup
+RUN bundle install --without production
 
-CMD rails server
+RUN bundle exec rake db:migrate
+
+RUN mkdir /app
+WORKDIR /app
+CMD RAILS_ENV=development rake db:migrate && RAILS_ENV=development rails server
