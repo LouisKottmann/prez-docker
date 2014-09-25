@@ -1,0 +1,4 @@
+docker run -it \
+	 -p 3000:3000 \
+	-v /home/baboon/GitRepos/prez-docker/03_rails/rails-todo-app-simple:/app \
+	baboon-rails:prez03

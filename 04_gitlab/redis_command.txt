@@ -1,0 +1,4 @@
+docker run -d --name=lilith_redis \
+	-p 6379:6379 \
+	-v /home/baboon/docker/lilith_redis/data:/data \
+	dockerfile/redis:latest
