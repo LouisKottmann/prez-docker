@@ -87,3 +87,5 @@ Voir  https://docs.docker.com/installation/windows ou https://docs.docker.com/in
 - préparer un conteneur sur une machine de dev et la passer sur une machine de prod sans accès internet
 
 ## Questions générales
+
+## [Video](https://www.youtube.com/watch?v=ddRwtxz_xRQ)
